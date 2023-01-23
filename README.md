@@ -5,6 +5,8 @@ This is very helpful for building a tutorial and walk the user across different 
 
 <img width="300" alt="image" src="/demo.gif?raw=true">
 
+⚠️ Please use `up to next major` and tag `1.1.0` for the Swift Package
+
 # Feature
 
 - Create highlight for multiple view components in SwiftUI (and show one at a time)
@@ -15,8 +17,12 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
+<<<<<<< HEAD
 ⚠️ V1.1.1 fixed the issue with the bounding area of the message bubble
 ⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
+=======
+⚠️ When used in a scrollable view (like a `Form`), the scrollview will not scroll to the highlighted view if it is not currently visible on the screen.
+>>>>>>> 3dc51253697d4657cc762a8201c5d971538b2f85
 
 # Example
 
@@ -93,13 +99,20 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
+<<<<<<< HEAD
 4. Use the version tag `1.1.1`
 5. Check the example code above
+=======
+4. Select `Up to next major version`
+5. Use the version tag `1.1.0`
+
+<img width="1112" alt="スクリーンショット 2023-01-23 17 04 54" src="https://user-images.githubusercontent.com/68307970/213991543-3302cb16-5e1d-45c9-bd96-f0c07fc21032.png">
+>>>>>>> 3dc51253697d4657cc762a8201c5d971538b2f85
 
 # Limitations
 
 - Only works on iOS
-- ⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. (in future release, might need to scroll the view to show the highlighted components)
+- ⚠️ When used in a scrollable view (like a `Form`), the scrollview will not scroll to the highlighted view if it is not currently visible on the screen. (in future release, might need to scroll the view to show the highlighted components)
 
 # License
 
