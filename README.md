@@ -89,6 +89,8 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 
 # Installation
 
+⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`.
+
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
@@ -98,7 +100,7 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 # Limitations
 
 - Only works on iOS
-- Might not work on ScrollViews (in future release, might need to scroll the view to show the highlighted components)
+- ⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. (in future release, might need to scroll the view to show the highlighted components)
 
 # License
 
