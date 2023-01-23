@@ -99,3 +99,7 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 
 - Only works on iOS
 - Might not work on ScrollViews (in future release, might need to scroll the view to show the highlighted components)
+
+# License
+
+When using this code, you have to attach the unmodified LICENSE file to the copies of your app and make it visible to the end users.
