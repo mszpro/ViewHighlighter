@@ -5,7 +5,7 @@ This is very helpful for building a tutorial and walk the user across different 
 
 <img width="300" alt="image" src="/demo.gif?raw=true">
 
-⚠️ Please use `up to next major` and tag `1.1.0` for the Swift Package
+⚠️ Please use `up to next major` and tag `1.1.1` for the Swift Package
 
 # Feature
 
@@ -17,12 +17,8 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
-<<<<<<< HEAD
 ⚠️ V1.1.1 fixed the issue with the bounding area of the message bubble
-⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
-=======
-⚠️ When used in a scrollable view (like a `Form`), the scrollview will not scroll to the highlighted view if it is not currently visible on the screen.
->>>>>>> 3dc51253697d4657cc762a8201c5d971538b2f85
+⚠️ This currently does not work great in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
 
 # Example
 
@@ -99,15 +95,14 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
-<<<<<<< HEAD
-4. Use the version tag `1.1.1`
+4. Use `Up to Next Major Version` and the version tag `1.1.1`
 5. Check the example code above
-=======
-4. Select `Up to next major version`
-5. Use the version tag `1.1.0`
 
 <img width="1112" alt="スクリーンショット 2023-01-23 17 04 54" src="https://user-images.githubusercontent.com/68307970/213991543-3302cb16-5e1d-45c9-bd96-f0c07fc21032.png">
->>>>>>> 3dc51253697d4657cc762a8201c5d971538b2f85
+
+If you already have this package imported, click on your project, click on `Xcode Packages` tab, double click on the `ViewHighlighter` package name, and set the `Up to Next Major Version` and the version tag `1.1.1`
+
+<img width="1352" alt="スクリーンショット 2023-01-23 17 36 03" src="https://user-images.githubusercontent.com/68307970/213996135-e2299281-2cc9-41af-8820-e4da0b941984.png">
 
 # Limitations
 
