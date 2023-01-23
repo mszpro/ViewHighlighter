@@ -94,8 +94,10 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
-4. Use the version tag `1.1.0`
-5. Check the example code above
+4. Select `Up to next major`
+5. Use the version tag `1.1.0`
+
+<img width="1112" alt="スクリーンショット 2023-01-23 17 04 54" src="https://user-images.githubusercontent.com/68307970/213991543-3302cb16-5e1d-45c9-bd96-f0c07fc21032.png">
 
 # Limitations
 
