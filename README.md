@@ -15,7 +15,7 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
-- Haven't tested on scrollable views yet
+⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
 
 # Example
 
