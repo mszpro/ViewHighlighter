@@ -15,6 +15,7 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
+⚠️ V1.1.1 fixed the issue with the bounding area of the message bubble
 ⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
 
 # Example
@@ -89,12 +90,10 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 
 # Installation
 
-⚠️ This currently does not work in scrollable views, including `Form`, `ScrollView`, `List`.
-
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
-4. Use the version tag `1.1.0`
+4. Use the version tag `1.1.1`
 5. Check the example code above
 
 # Limitations
