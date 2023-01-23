@@ -99,7 +99,7 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 4. Use `Up to Next Major Version` and the version tag `1.1.1`
 5. Check the example code above
 
-<img width="1112" alt="スクリーンショット 2023-01-23 17 04 54" src="https://user-images.githubusercontent.com/68307970/213991543-3302cb16-5e1d-45c9-bd96-f0c07fc21032.png">
+![FnJPWBAaEAAHQLY](https://user-images.githubusercontent.com/68307970/213997650-46f742e9-cbd1-4b57-a83e-ad75c35b916d.jpeg)
 
 If you already have this package imported, click on your project, click on `Xcode Packages` tab, double click on the `ViewHighlighter` package name, and set the `Up to Next Major Version` and the version tag `1.1.1`
 
