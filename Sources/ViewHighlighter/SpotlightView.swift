@@ -68,54 +68,76 @@ private struct OverlayView: View {
             .overlay(alignment: .top) {
                 
                 VStack {
-                    
                     Text(textContent)
                         .padding(.all, 15)
-                        .foregroundColor(Color.white)
-                        .background {
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(.blue)
-                                .shadow(radius: 10)
-                        }
+                    Image(systemName: "chevron.left.circle.fill")
+                        .font(.system(size: 25))
+                    Text("Page count")
+                    Image(systemName: "chevron.left.circle.fill")
+                        .font(.system(size: 25))
+                }
+                .padding()
+                .opacity(0) // this view is just used to estimate the size of the text
+                .overlay {
                     
-                    HStack {
+                    GeometryReader { proxy in
                         
-                        // switch to previous one button
-                        Button {
-                            guard let currentSpotIndex = self.currentSpot else { return }
-                            currentSpot = currentSpotIndex - 1
-                        } label: {
-                            Image(systemName: "chevron.left.circle.fill")
+                        VStack {
+                            
+                            Text(textContent)
+                                .padding(.all, 15)
+                                .foregroundColor(Color.white)
+                                .background {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .foregroundColor(.blue)
+                                        .shadow(radius: 10)
+                                }
+                            
+                            HStack {
+                                
+                                // switch to previous one button
+                                Button {
+                                    guard let currentSpotIndex = self.currentSpot else { return }
+                                    currentSpot = currentSpotIndex - 1
+                                } label: {
+                                    Image(systemName: "chevron.left.circle.fill")
+                                }
+                                .disabled((currentSpot ?? 0) <= 0)
+                                .font(.system(size: 25))
+                                
+                                // current page index
+                                Text("\((currentSpot ?? 0) + 1)/\(totalSpotsCount)")
+                                
+                                // switch to next one button
+                                Button {
+                                    guard let currentSpotIndex = self.currentSpot else { return }
+                                    currentSpot = currentSpotIndex + 1
+                                } label: {
+                                    Image(systemName: "chevron.right.circle.fill")
+                                }
+                                .disabled((currentSpot ?? 0) >= (totalSpotsCount - 1))
+                                .font(.system(size: 25))
+                                
+                            }
+                            
+                            Button {
+                                currentSpot = totalSpotsCount
+                            } label: {
+                                Image(systemName: (currentSpot == (totalSpotsCount - 1)) ? "xmark" : "chevron.forward.2")
+                                    .foregroundColor(.white)
+                            }
+                            .buttonStyle(.bordered)
+                            
                         }
-                        .disabled((currentSpot ?? 0) <= 0)
-                        .font(.system(size: 25))
-                        
-                        // current page index
-                        Text("\((currentSpot ?? 0) + 1)/\(totalSpotsCount)")
-                        
-                        // switch to next one button
-                        Button {
-                            guard let currentSpotIndex = self.currentSpot else { return }
-                            currentSpot = currentSpotIndex + 1
-                        } label: {
-                            Image(systemName: "chevron.right.circle.fill")
-                        }
-                        .disabled((currentSpot ?? 0) >= (totalSpotsCount - 1))
-                        .font(.system(size: 25))
+                        .offset(y: (
+                            highlightAnchorPosition.minY > UIScreen.main.bounds.height / 2 ||
+                            highlightAnchorPosition.maxY > UIScreen.main.bounds.height / 2
+                        ) ? highlightAnchorPosition.minY - proxy.size.height - 20 : highlightAnchorPosition.maxY)
+                        .padding()
                         
                     }
-                    
-                    Button {
-                        currentSpot = totalSpotsCount
-                    } label: {
-                        Image(systemName: (currentSpot == (totalSpotsCount - 1)) ? "xmark" : "chevron.forward.2")
-                            .foregroundColor(.white)
-                    }
-                    .buttonStyle(.bordered)
                     
                 }
-                .offset(x: 0, y: (highlightAnchorPosition.minY > UIScreen.main.bounds.height / 2) ? (UIScreen.main.bounds.height / 2) : highlightAnchorPosition.maxY)
-                .padding()
                 
             }
             .onTapGesture {
