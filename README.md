@@ -92,3 +92,8 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
 4. Use the `main` branch or version tag
 5. Check the example code above
+
+# Limitations
+
+- Only works on iOS
+- Might not work on ScrollViews (in future release, might need to scroll the view to show the highlighted components)
