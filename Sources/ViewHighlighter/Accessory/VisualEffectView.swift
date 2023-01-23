@@ -1,6 +1,6 @@
 //
 //  VisualEffectView.swift
-//  KyotoShrineGuide
+//  ViewHighlighter
 //
 //  Created by msz on 2023/01/02.
 //
