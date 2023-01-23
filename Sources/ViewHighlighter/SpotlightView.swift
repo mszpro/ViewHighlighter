@@ -6,7 +6,6 @@ import SwiftUI
 struct HighlightedProperty {
     var anchor: Anchor<CGRect>
     var text: String = ""
-    var radius: CGFloat = 0
 }
 
 @available(iOS 15.0, *)
@@ -22,10 +21,10 @@ struct AnchorPreference: PreferenceKey {
 public extension View {
     
     @ViewBuilder
-    func addSpotlight(_ id: Int, roundedRadius: CGFloat = 0, text: String) -> some View {
+    func addSpotlight(_ id: Int, text: String) -> some View {
         self
             .anchorPreference(key: AnchorPreference.self, value: .bounds) {
-                [id: HighlightedProperty(anchor: $0, text: text, radius: roundedRadius)]
+                [id: HighlightedProperty(anchor: $0, text: text)]
             }
     }
     
