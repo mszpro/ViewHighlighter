@@ -5,6 +5,8 @@ This is very helpful for building a tutorial and walk the user across different 
 
 <img width="300" alt="image" src="/demo.gif?raw=true">
 
+⚠️ Please use `up to next major` and tag `1.1.0` for the Swift Package
+
 # Feature
 
 - Create highlight for multiple view components in SwiftUI (and show one at a time)
