@@ -130,6 +130,7 @@ private struct OverlayView: View {
                                    height: highlightAnchorPosition.height)
                             .offset(x: highlightAnchorPosition.minX,
                                     y: highlightAnchorPosition.minY)
+                            .blendMode(.destinationOut)
                     }
             }
         
