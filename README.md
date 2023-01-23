@@ -5,7 +5,7 @@
 Highlight multiple view components in your SwiftUI view one by one with a text caption.
 This is very helpful for building a tutorial and walk the user across different features of your app.
 
-<img width="300" alt="image" src="/demo.gif?raw=true">
+<img width="300" alt="image" src="/demo-new.gif?raw=true">
 
 # Feature
 
