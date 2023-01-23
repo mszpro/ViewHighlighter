@@ -60,11 +60,12 @@ private struct OverlayView: View {
     @Binding var currentSpot: Int?
     var totalSpotsCount: Int
     var textContent: String
+    var blurredViewOpacity: CGFloat = 0.9
     
     var body: some View {
         
         VisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterialDark))
-            .opacity((currentSpot != nil) ? 0.9 : 0)
+            .opacity((currentSpot != nil) ? blurredViewOpacity : 0)
             .overlay(alignment: .top) {
                 
                 VStack {
@@ -130,7 +131,6 @@ private struct OverlayView: View {
                                    height: highlightAnchorPosition.height)
                             .offset(x: highlightAnchorPosition.minX,
                                     y: highlightAnchorPosition.minY)
-                            .blendMode(.destinationOut)
                     }
             }
         
