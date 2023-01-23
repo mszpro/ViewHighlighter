@@ -63,22 +63,22 @@ Then, use the following modifier for each view element on screen you want to hig
 
 ```swift
 SearchTextFieldView(searchText: .constant("Some search text"))
-    .addSpotlight(0, text: "Search for the name of a location")
++    .addSpotlight(0, text: "Search for the name of a location")
 ```
 
 For example, in the above code, the `SearchTextFieldView` is at index 0, which is the first element to be shown in the highlight view. The text will also be shown as a caption.
 
 <img width="300" alt="image" src="/first-example.jpg?raw=true">
 
-```swift
+```diff
 Button {
     self.currentSpot = 0
 } label: {
     Image(systemName: "star")
 }
-.buttonStyle(.borderedProminent)
-.font(.system(size: 30))
-.addSpotlight(1, text: "Button in the middle of the view just to test the feature of this framework")
+    .buttonStyle(.borderedProminent)
+    .font(.system(size: 30))
++    .addSpotlight(1, text: "Button in the middle of the view just to test the feature of this framework")
 ```
 
 In the above code, the `Button` is the second element to be shown in the spotlight view.
