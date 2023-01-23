@@ -18,6 +18,7 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can also use the left/right arrow to switch between highlights
 
 ⚠️ V1.1.1 fixed the issue with the bounding area of the message bubble
+
 ⚠️ This currently does not work great in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
 
 # Example
