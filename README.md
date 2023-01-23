@@ -1,11 +1,11 @@
 # SwiftUI View Highlighter
 
+⚠️ Please use `up to next major` and tag `1.1.1` for the Swift Package. There was some issues with the previous version tags.
+
 Highlight multiple view components in your SwiftUI view one by one with a text caption.
 This is very helpful for building a tutorial and walk the user across different features of your app.
 
 <img width="300" alt="image" src="/demo.gif?raw=true">
-
-⚠️ Please use `up to next major` and tag `1.1.1` for the Swift Package
 
 # Feature
 
