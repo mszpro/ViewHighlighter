@@ -61,7 +61,7 @@ struct ViewHighlighterExample: View {
 
 Then, use the following modifier for each view element on screen you want to highlight. Remember to define a unique index for each one. And the index should be from 0, and going up.
 
-```swift
+```diff
 SearchTextFieldView(searchText: .constant("Some search text"))
 +    .addSpotlight(0, text: "Search for the name of a location")
 ```
