@@ -15,6 +15,8 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
+- Haven't tested on scrollable views yet
+
 # Example
 
 Please check and run the preview of the example code first.
