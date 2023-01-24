@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: swift build -v --destination 'platform=iOS Simulator,OS=15.0,name=iPhone 14 Pro'
+      run: swift build -v --destination 'platform=iOS Simulator,name=iPhone 14 Pro'
