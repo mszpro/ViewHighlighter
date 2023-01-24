@@ -1,6 +1,7 @@
 # SwiftUI View Highlighter
 
-⚠️ Please use `up to next major` and tag `1.1.1` for the Swift Package. There was some issues with the previous version tags.
+⚠️ Please use `up to next major` and tag `1.1.3` for the Swift Package.
+There was some issues with the previous version tags.
 
 Highlight multiple view components in your SwiftUI view one by one with a text caption.
 This is very helpful for building a tutorial and walk the user across different features of your app.
@@ -17,15 +18,25 @@ This is very helpful for building a tutorial and walk the user across different 
 - User can tap the empty area of the screen to switch to the next highlight
 - User can also use the left/right arrow to switch between highlights
 
-⚠️ V1.1.1 fixed the issue with the bounding area of the message bubble
-
-⚠️ This currently does not work great in scrollable views, including `Form`, `ScrollView`, `List`. I am working on this feature.
+- Works in ScrollView using ScrollViewReader
 
 # Example
 
 Please check and run the preview of the example code first.
 
 [ViewHighlighterExample](/Sources/ViewHighlighterExample/ViewHighlighterExample.swift)
+
+# About using in ScrollView
+
+In ScrollView, you have to add a ScrollView reader and scroll your view when the highlighted index changes. Please check the following example for details:
+
+[ViewHighlighter_ScrollViewExample](/Sources/ViewHighlighterExample/ViewHighlighter_ScrollViewExample.swift)
+
+Please note that, if your content changes according to variable (instead of static images and text), you should not use the index (0,1,2,3) as the `id`, since SwiftUI uses this id to reload the views. Instead, you should use the id of the content itself (for example, if it is for a social media post, the post ID), and call `scrollTo` with that ID.
+
+Check the following example to see how:
+
+[ViewHighlighter_ScrollViewExample_Dynamic](/Sources/ViewHighlighterExample/ViewHighlighter_ScrollViewExample_Dynamic.swift)
 
 # Usage
 
@@ -96,19 +107,19 @@ In the above code, the `Button` is the second element to be shown in the spotlig
 1. Open your project in Xcode
 2. Click on the `File` menu on top, and click on `Add Packages...`
 3. Copy and paste the URL to search box `https://github.com/mszpro/ViewHighlighter.git` and hit enter
-4. Use `Up to Next Major Version` and the version tag `1.1.1`
+4. Use `Up to Next Major Version` and the version tag `1.1.3`
 5. Check the example code above
 
 ![FnJPWBAaEAAHQLY](https://user-images.githubusercontent.com/68307970/213997650-46f742e9-cbd1-4b57-a83e-ad75c35b916d.jpeg)
 
-If you already have this package imported, click on your project, click on `Xcode Packages` tab, double click on the `ViewHighlighter` package name, and set the `Up to Next Major Version` and the version tag `1.1.1`
+If you already have this package imported, click on your project, click on `Xcode Packages` tab, double click on the `ViewHighlighter` package name, and set the `Up to Next Major Version` and the version tag `1.1.3`
 
 <img width="1352" alt="スクリーンショット 2023-01-23 17 36 03" src="https://user-images.githubusercontent.com/68307970/213996135-e2299281-2cc9-41af-8820-e4da0b941984.png">
 
 # Limitations
 
 - Only works on iOS
-- ⚠️ When used in a scrollable view (like a `Form`), the scrollview will not scroll to the highlighted view if it is not currently visible on the screen. (in future release, might need to scroll the view to show the highlighted components)
+- For ScrollView, you need to implement ScrollViewReader and scroll the view when the highlighted index changes (using `onChange` to monitor the changes).
 
 # License
 
