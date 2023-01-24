@@ -6,7 +6,9 @@ There was some issues with the previous version tags.
 Highlight multiple view components in your SwiftUI view one by one with a text caption.
 This is very helpful for building a tutorial and walk the user across different features of your app.
 
-<img width="300" alt="image" src="/demo-new.gif?raw=true">
+| VStack | ScrollView |
+|---|---|
+| <img width="200" alt="image" src="/demo-new.gif?raw=true"> | <img width="200" alt="image" src="https://user-images.githubusercontent.com/68307970/214223175-0f22a2bd-e369-4aee-98e4-17ac10c4f111.gif"> |
 
 # Feature
 
