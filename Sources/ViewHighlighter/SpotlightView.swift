@@ -73,8 +73,6 @@ private struct OverlayView: View {
                     Image(systemName: "chevron.left.circle.fill")
                         .font(.system(size: 25))
                     Text("Page count")
-                    Image(systemName: "chevron.left.circle.fill")
-                        .font(.system(size: 25))
                 }
                 .padding()
                 .opacity(0) // this view is just used to estimate the size of the text
@@ -109,31 +107,33 @@ private struct OverlayView: View {
                                 Text("\((currentSpot ?? 0) + 1)/\(totalSpotsCount)")
                                 
                                 // switch to next one button
-                                Button {
-                                    guard let currentSpotIndex = self.currentSpot else { return }
-                                    currentSpot = currentSpotIndex + 1
-                                } label: {
-                                    Image(systemName: "chevron.right.circle.fill")
+                                // only shown if this is not the last spotlight
+                                if (currentSpot ?? 0) < (totalSpotsCount - 1) {
+                                    Button {
+                                        guard let currentSpotIndex = self.currentSpot else { return }
+                                        currentSpot = currentSpotIndex + 1
+                                    } label: {
+                                        Image(systemName: "chevron.right.circle.fill")
+                                    }
+                                    .font(.system(size: 25))
                                 }
-                                .disabled((currentSpot ?? 0) >= (totalSpotsCount - 1))
+                                
+                                // skip or close button
+                                Button {
+                                    currentSpot = totalSpotsCount
+                                } label: {
+                                    Image(systemName: (currentSpot == (totalSpotsCount - 1)) ? "xmark.circle.fill" : "forward.end.circle.fill")
+                                }
                                 .font(.system(size: 25))
                                 
                             }
                             
-                            Button {
-                                currentSpot = totalSpotsCount
-                            } label: {
-                                Image(systemName: (currentSpot == (totalSpotsCount - 1)) ? "xmark" : "chevron.forward.2")
-                                    .foregroundColor(.white)
-                            }
-                            .buttonStyle(.bordered)
-                            
                         }
+                        .padding()
                         .offset(y: (
                             highlightAnchorPosition.minY > UIScreen.main.bounds.height / 2 ||
                             highlightAnchorPosition.maxY > UIScreen.main.bounds.height / 2
-                        ) ? highlightAnchorPosition.minY - proxy.size.height - 20 : highlightAnchorPosition.maxY)
-                        .padding()
+                        ) ? (highlightAnchorPosition.minY - proxy.size.height) : highlightAnchorPosition.maxY)
                         
                     }
                     
