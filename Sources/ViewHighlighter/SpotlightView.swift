@@ -131,7 +131,7 @@ private struct OverlayView: View {
                         }
                         .padding()
                         .offset(y: (
-                            highlightAnchorPosition.minY > UIScreen.main.bounds.height / 2 ||
+                            highlightAnchorPosition.minY > UIScreen.main.bounds.height / 2 &&
                             highlightAnchorPosition.maxY > UIScreen.main.bounds.height / 2
                         ) ? (highlightAnchorPosition.minY - proxy.size.height) : highlightAnchorPosition.maxY)
                         
